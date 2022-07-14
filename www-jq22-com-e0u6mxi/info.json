@@ -1,0 +1,114 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.jq22.com/demo/jquerybaby201902261049/",
+            "path": "index.html",
+            "saved": true,
+            "size": 4137,
+            "children": [
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/img/bg.png",
+                    "path": "img/bg.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/images/rod.png",
+                    "path": "img/rod.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/images/hand.png",
+                    "path": "img/hand.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/img/start.png",
+                    "path": "img/start.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/images/toy117.png",
+                    "path": "img/toy117.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.jq22.com/demo/jquerybaby201902261049/js/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "saved": true,
+                    "size": 95962,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "www-jq22-com-e0u6mxi",
+    "info": {
+        "remark": [],
+        "title": "夹娃娃抽奖",
+        "domain": "www.jq22.com",
+        "origin": "https://www.jq22.com",
+        "ip": "183.61.190.86",
+        "main": "index.html",
+        "url": "https://www.jq22.com/demo/jquerybaby201902261049/",
+        "totalSize": "100 kB",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.jq22.com/demo/jquerybaby201902261049/",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "responseUrl": "https://www.jq22.com/demo/jquerybaby201902261049/",
+            "redirects": [],
+            "statusCode": 200,
+            "headers": {
+                "content-type": "text/html",
+                "date": "Thu, 14 Jul 2022 07:43:45 GMT",
+                "etag": "W/\"0cdefe97dcdd41:0\"",
+                "last-modified": "Tue, 26 Feb 2019 02:49:38 GMT",
+                "server": "yunjiasu",
+                "set-cookie": [
+                    "__yjs_duid=1_db1757e0187dd1c661fda38a35363ce41657784625767; expires=Sat, 13-Jul-24 07:43:45 GMT; Path=/; Domain=jq22.com; HttpOnly; Secure"
+                ],
+                "x-powered-by": "ASP.NET",
+                "yjs-id": "b77434f1879f345a-134",
+                "connection": "close",
+                "transfer-encoding": "chunked"
+            }
+        },
+        "time": {
+            "start": "2022-07-14T07:43:44.861Z",
+            "end": "2022-07-14T07:43:49.624Z"
+        }
+    },
+    "options": {
+        "url": "https://www.jq22.com/demo/jquerybaby201902261049/",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "formatter": [],
+        "filenameGenerator": "byType"
+    }
+}
