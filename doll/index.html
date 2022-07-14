@@ -87,6 +87,9 @@
 			outline: none;
 			cursor: pointer;
 		}
+		#uptoyImg {
+			width: 200px;
+		}
 	</style>
 </head>
 
@@ -107,7 +110,7 @@
 	</div>
 
 	<div id="uptoy">
-		<img src="img/toy117.png">
+		<img id="uptoyImg" src="img/toy117.png">
 	</div>
 	<div id="start_btn">
 	</div>
@@ -144,8 +147,10 @@
 				//循环遍历数组判断，是否可以被夹起来
 				for (var i = 0; i < toys.length; i++) {
 					if ($(toys[i]).css("left").match(/\d*/) > 300 && $(toys[i]).css("left").match(/\d*/) < 400) {
+						console.log(toys[i][0].currentSrc,'sssssssssssssssssssss')
 						toys[i].remove(); //移除这个元素
 
+						$("#uptoyImg").attr("src",toys[i][0].currentSrc)
 						$("#uptoy").css("display", "block"); //将隐藏起来的那个可以被夹起来的娃娃显示出来
 
 						//让隐藏的娃娃和夹子一起上去
@@ -178,11 +183,12 @@
 		//每隔一秒钟生成一个娃娃并且往右移动
 		window.setInterval(function () {
 			//创建娃娃元素的图片
-			var img = $("<img style='position:absolute;left:0px;width:200px' src='img/toy117.png'>");
+			var img = $("<img style='position:absolute;left:0px;width:200px' src='img/toy119.jpg '>");
 			var img1 = $("<img style='position:absolute;left:0px;width:200px' src='img/toy118.jpg'>");
-			var img2 = $("<img style='position:absolute;left:0px;width:200px' src='img/toy119.jpg'>");
-			var img3 = $("<img style='position:absolute;left:0px;width:200px' src='img/toy120.jpg'>");
+			var img2 = $("<img style='position:absolute;left:0px;width:200px' src='img/toy117.png'>");
+			var img3 = $("<img style='position:absolute;left:0px;width:200px' src='img/toy120.png'>");
 			var num = Math.random()
+			// console.log(num,'随机数')
 			if (num <= 0.25) {
 
 				toys.push(img); //将图片放入到数组最后
