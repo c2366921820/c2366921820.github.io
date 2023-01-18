@@ -1,479 +1,89 @@
-<!doctype html>
-<!DOCTYPE html><!--[if lt IE 7]>
-<html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>
-<html class="lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>
-<html class="lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html><!--<![endif]--><head><meta charset="utf-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="renderer" content="webkit">
-    <title>妮可想吃啥呢？</title>
-        <meta name="keywords" content="随便吃！">
-        <meta name="description" content="吃什么？">
-        <link rel="stylesheet" type="text/css" id="layuicss-layer" href="css/layer.css">
-    <link rel="stylesheet" type="text/css" href="css/all.min.css">
-    
-    <style>
-    @media (max-width: 480px) {
-        h3.search-title {
-            font-size: 28px;
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>打开信有话对你说</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        [id^=root],
+        [id^=docs],
+        .cc_cursor,
+        body,
+        .ogdlpmhglpejoiomcodnpjnfgcpmgale_default,
+        body,
+        html,
+        input[type="date"],
+        input[type="time"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input::-webkit-contacts-auto-fill-button,
+        input:read-only {
+            cursor: url("data:image/png;base64,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") 1 1, auto !important;
         }
 
-        form.index-search-form .search-term {
-            width: 60%;
+        [role^=button],
+        button,
+        .cc_pointer,
+        [type="search"]::-webkit-search-cancel-button,
+        a,
+        select,
+        [type="search"]::-webkit-search-decoration,
+        .paper-button,
+        .ytp-progress-bar-container,
+        input[type=submit],
+        :link,
+        :visited,
+        a>*,
+        img,
+        button,
+        ::-webkit-scrollbar-button,
+        .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer,
+        ::-webkit-file-upload-button,
+        button,
+        .ytp-volume-panel,
+        #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon {
+            cursor: url("data:image/png;base64,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") 11 1, auto !important;
         }
 
-        .swiper-recommend .swiper-slide {
-            margin-right: 0px;
+        * {
+            cursor: url("data:image/png;base64,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") 1 1, auto
         }
-    }
 
-    .signin-rank-table > tbody > tr > td {
-        vertical-align: middle;
-    }
-</style>
-
-    <!--[if lt IE 9]>
-    <script src="/libs/html5shiv.js?v="></script>
-    <script src="/libs/respond.min.js?v="></script>
-    <![endif]-->
-
-    <script type="text/javascript">
-        var Config = {"upload":{"uploadurl":"\/index\/ajax\/upload.html","cdnurl":"","savekey":"\/uploads\/{year}{mon}{day}\/{filemd5}{.suffix}","maxsize":"10mb","mimetype":"jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx","multiple":false,"bucket":"local","multipart":[]},"controllername":"index","actionname":"index","url_domain_deploy":false,"__PUBLIC__":"\/","__ROOT__":"\/","__CDN__":"","loadmode":"paging","pagesize":{"question":"30","article":"30","answer":"50","comment":"10"},"inviteprice":"1-10","user":null};
-    </script>
-<link rel="stylesheet" href="css/global.css">
-<script src="js/global.js"></script>
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.min.js"></script>
-<link rel="shortcut icon" href="img/logo_1.png">
+        a,
+        button,
+        [type^=button],
+        [role^=button] {
+            cursor: url("data:image/png;base64,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") 11 1, auto
+        }
+    </style>
 </head>
-<body class="group-page">
 
-<div class="full-section search-section-listing" style="text-align: center;" id="body">
-    <div class="search-area container">
-        <h3 class="search-title">好饿？<b id="what">想吃饭了但是不知道吃啥</b>？</h3>
-        <p class="search-tag-line">点击按钮，解决干饭人的难题！</p>
-        	<input type="button" value="加载中..." id="start" disabled="">
-	<p><span id="cfg" title="编辑候选菜单"> 编辑菜单 </span></p>
-	
-	</p>
-
-	<div id="popbox-wrapper">
-		<div id="popbox">
-			<h3>~ 菜单 ~</h3>
-
-			
-			<textarea type="hidden" rows="7" cols="51" id="list" name="list" placeholder="在这里输入菜单，项目间以空格分隔..."> 麻辣烫 麻辣香锅 饺子 黄焖鸡 米线 炸鸡 炒饭 寿司 螺蛳粉 麦当劳 粥 馄饨 冒菜 酸菜鱼 烧烤 汉堡 披萨 凉皮 水饺 火锅 酸辣粉 肯德基 拉面 泡面 兰州拉面 烤肉拌饭 煲仔饭 黄焖鸡米饭 包子 炸酱面 鸡公煲 石锅拌饭 汉堡王 炒面 盖浇饭 重庆小面 煎饼果子 KFC 麻辣拌 烤冷面 肠粉 猪脚饭 小碗菜 咖喱饭 炒菜 沙县小吃 烤肉饭 拌面 盖饭 牛肉面</textarea>
-			<input type="button" value="确定" id="ok" class="btn btn-primary">
-
-
-		</div>
-	</div>
-	<script src="js/script.js"></script>
-    </div>
-</div>
-
-
-<script type="text/html" id="ranktpl">
-    <div style="padding:20px;min-height:300px;">
-        <table class="table table-striped table-hover signin-rank-table">
-            <thead>
-            <tr>
-                <th>头像</th>
-                <th width="50%">昵称</th>
-                <th class="text-center">连续签到</th>
-            </tr>
-            </thead>
-            <tbody>
-            <%for(var i=0;i< ranklist.length;i++){%>
-            <tr>
-                <td><a href="<%=ranklist[i]['user']['url']%>"><img src="<%=ranklist[i]['user']['avatar']%>" height="30" width="30" alt="" class="img-circle"/></a></td>
-                <td><a href="<%=ranklist[i]['user']['url']%>"><%=ranklist[i]['user']['nickname']%></a></td>
-                <td class="text-center"><%=ranklist[i]['days']%> 天</td>
-            </tr>
-            <%}%>
-            </tbody>
-        </table>
-    </div>
-</script>
-
-<!--搜索模板-->
-<script type="text/html" id="bodytpl">
-
-    <%if(typeof item.title == 'undefined'){%>
-    <%if(item.length>0){%>
-    <div class="autocomplete-searchtags">
-        <table style="width:100%;">
-            <tr>
-                <td colspan="2">
-                    <div class="search-subject">
-                        <%for(var i=0;i< item.length;i++){%>
-                        <a href="<%=item[i].url%>" class="tag"><%if(item[i].icon){%><img src="<%=item[i].icon%>" alt=""><%}%><%=#replace(item[i].name)%></a>
-                        <%}%>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <%}%>
-    <%}else{%>
-    <div class="autocomplete-suggestion autocomplete-questions" data-href="<%=item.url%>" data-url="<%=item.url%>">
-        <table style="width:100%;">
-            <tr>
-                <td>
-                    <div class="search-subject">
-                        <%if(item.price>0){%>
-                            <%if(item.type=='question'){%>
-                            <span class="question-price-tag" title="如果回答被采纳，回答者将获得<%=item.price%>元">￥<%=item.price%></span>
-                            <%}else{%>
-                            <span class="question-price-tag" title="此文章需要支付<%=item.price%>元才能查看">￥<%=item.price%></span>
-                            <%}%>
-                        <%}%>
-                        <%if(item.score>0){%>
-                            <%if(item.type=='question'){%>
-                            <span class="question-price-tag" title="如果回答被采纳，回答者将获得<%=item.price%>积分">￥<%=item.score%></span>
-                            <%}else{%>
-                            <span class="question-price-tag" title="此文章需要消耗<%=item.price%>积分才能查看">￥<%=item.score%></span>
-                            <%}%>
-                        <%}%>
-                        <a href="<%=item.url%>"><%=#replace(item.title)%></a>
-                    </div>
-                    <div class="search-meta text-muted small">
-                        <%=item.userinfo.nickname%> 发布于 <%=item.create_date%>
-                    </div>
-                </td>
-                <td class="text-muted text-right" style="width:70px;vertical-align: top;">
-                    <div class="tag tag-xs <%=item.type=='question'?'':'tag-danger'%>"><%=item.type=='question'?'问题':'文章'%></div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <%}%>
-</script>
-
-<!--感谢模板-->
-<script id="thankstpl" type="text/html">
-    <div class="p-4">
-        <div class="alert alert-warning" role="alert">
-            我们应该多多支持小伙伴的分享及热心帮助！
-        </div>
-
-        <div class="">
-            <div class="text-center" style="margin-bottom:20px;">
-                <img src="<%=userAvatar%>" class="img-circle" width="100" height="100" alt="">
-                <h5><a href="<%=userUrl%>" target="_blank"><%=userNickname%></a></h5>
+<body>
+    <div class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="heart-big"></div>
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1" style="padding-left: 5px;">呆呆</div>
+                <div class="words line2" style="padding-left: 5px; display: flex; align-items: center;">明人不说暗话，我喜欢你！</div>
+                <div class="words line3" style="padding-left: 5px; display: flex; align-items: center;">做哥女朋友请扣1 不做扣眼珠子</div>
+                <div class="words line4" style="padding-left: 5px; display: flex; align-items: center;">哈哈哈哈哈哈</div>
             </div>
-            <form action="/addons/ask/thanks/create.html" id="thanks-form" method="post" target="_blank">
-                <input type="hidden" name="id" value="<%=id%>"/>
-                <input type="hidden" name="type" value="<%=type%>"/>
-                <input type="hidden" name="money" value="1"/>
-                <div class="row">
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money active" data-money="1">￥1 元</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money" data-money="5">￥5 元</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money" data-money="10">￥10 元</button>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money" data-money="20">￥20 元</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money" data-money="50">￥50 元</button>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-light btn-block btn-money" data-money="100">￥100 元</button>
-                    </div>
-                </div>
-                <div class="row my-1 text-center">
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" value="" placeholder="请输入你的留言，可选"/>
-                    </div>
-                </div>
-                <hr>
-                <div class="row my-1 text-center">
-                    <div class="col-xs-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="paytype" id="paytype-wechat"
-                                   value="wechat" checked>
-                            <label class="form-check-label" for="paytype-wechat">微信</label>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="paytype" id="paytype-alipay"
-                                   value="alipay">
-                            <label class="form-check-label" for="paytype-alipay">支付宝</label>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="paytype" id="paytype-balance"
-                                   value="balance">
-                            <label class="form-check-label" for="paytype-balance" data-toggle="tooltip" data-title="余额：￥0">余额支付</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col text-center">
-                        <button type="submit" class="btn btn-primary btn-submit-thanks">立即支付</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</script>
-
-<!--举报模板-->
-<script id="reporttpl" type="text/html">
-    <div class="p-4">
-        <div class="alert alert-info" role="alert">
-            让我们一起共建文明社区！您的反馈至关重要！
-        </div>
-
-        <div class="">
-            <form action="/addons/ask/report/create.html" id="report-form" method="post">
-                <input type="hidden" name="id" value="<%=id%>"/>
-                <input type="hidden" name="type" value="<%=type%>"/>
-                <div class="row radio">
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="1" checked> 色情低俗</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="2" > 政治敏感</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="3" > 违法暴力</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="4" > 恐怖血腥</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="5" > 非法贩卖</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="6" > 仇恨言论</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="7" > 打小广告</label>
-                    </div>
-                                        <div class="col-xs-6 py-1">
-                        <label><input type="radio" name="reason" value="8" > 其他</label>
-                    </div>
-                                    </div>
-
-                <div class="row my-1 text-center">
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" value="" placeholder="其它信息，可选"/>
-                    </div>
-                </div>
-                <hr>
-                <div class="row mt-2">
-                    <div class="col text-center">
-                        <button type="submit" class="btn btn-primary btn-submit-thanks">提交反馈</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</script>
-
-<!--支付模板-->
-<script type="text/html" id="paynowtpl">
-    <div class="" style="padding:20px 20px 20px 20px;min-width:330px;min-height:220px;">
-        <div>
-            <div class="alert alert-info">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div style="font-size:14px;"><b>支付金额：￥<%=price%></b></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <form action="/addons/ask/order/submit.html" id="paynow-form" method="post" target="_blank">
-            <input type="hidden" name="id" value="<%=id%>"/>
-            <input type="hidden" name="type" value="<%=type%>"/>
-            <hr>
-            <div class="row my-4 text-center">
-                <div class="col-xs-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paytype" id="paytype-wechat"
-                               value="wechat" checked>
-                        <label class="form-check-label" for="paytype-wechat">
-                            <img src="/assets/addons/ask/img/wechat.png" height="30" alt="">
-                        </label>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paytype" id="paytype-alipay"
-                               value="alipay">
-                        <label class="form-check-label" for="paytype-alipay">
-                            <img src="/assets/addons/ask/img/alipay.png" height="30" alt="">
-                        </label>
-                    </div>
-                </div>
-                <div class="col-xs-4">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="paytype" id="paytype-balance" disabled                        value="balance">
-                        <label class="form-check-label" for="paytype-balance" data-toggle="tooltip" data-title="余额：￥0">
-                            <img src="/assets/addons/ask/img/balance.png" height="30" alt="">
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row mt-2">
-                <div class="col text-center">
-                    <button type="submit" class="btn btn-primary btn-submit-pay">立即支付</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</script>
-
-<!--分享模板-->
-<script id="sharetpl" type="text/html">
-    <div id="sharenow" style="padding:20px;">
-        <div class="row text-center">
-            <div class="col-xs-12">
-                <img src="/addons/ask/qrcode/build.html?text=<%=url%>&logo=1&logosize=50&padding=0" width="120" alt="">
-                <div class="my-2">
-                    扫码分享到微信
-                </div>
-            </div>
-        </div>
-        <div class="row text-center mt-3 pt-2">
-            <div class="col-xs-4">
-                <a href="http://service.weibo.com/share/share.php?url=<%=url%>&title=<%=title%>" target="_blank">
-                <span class="fa-stack fa-lg text-danger">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                </span><br>
-                    分享到微博
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="javascript:" class="btn-share-wechat" onclick="layer.msg('请使用微信扫描上方二维码进行分享');">
-                <span class="fa-stack fa-lg text-success">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-wechat fa-stack-1x fa-inverse"></i>
-                </span><br>
-                    分享到微信
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="https://connect.qq.com/widget/shareqq/index.html?url=<%=url%>&title=<%=title%>&desc=&summary=&site=中午吃什么" target="_blank">
-                <span class="fa-stack fa-lg text-info">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-qq fa-stack-1x fa-inverse"></i>
-                </span><br>
-                    分享到QQ
-                </a>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
             </div>
         </div>
     </div>
-</script>
+    <div class="reset">
+        <button id="open">打开</button>
+        <button id="reset">合上</button>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 
-<script type="text/javascript" src="js/all.min.js" merge="true"></script>
+</body>
 
-<script src="js/jquery.swiper.min.js"></script><script>
-    $(function () {
-        ASK.render.question("#searchquestion");
-        var mySwiper = new Swiper('.swiper-container', {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 5,
-            paginationClickable: true,
-            spaceBetween: 30,
-            breakpoints: {
-                1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 40
-                },
-                970: {
-                    slidesPerView: 3,
-                    spaceBetween: 50
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                }
-            }
-        });
-        $(document).on("click", ".btn-signin,.today", function () {
-            ASK.api.ajax("/index/signin/dosign.html", function () {
-                ASK.api.msg("签到成功!", function () {
-                    location.reload();
-                });
-            });
-            return false;
-        });
-        $(document).on("click", ".btn-rank", function () {
-            ASK.api.ajax("/index/signin/rank.html", function (data) {
-                layer.open({
-                    title: '签到排行榜',
-                    type: 1,
-                    zIndex: 88,
-                    area: isMobile ? 'auto' : ["400px"],
-                    content: template("ranktpl", data),
-                    btn: []
-                });
-                return false;
-            });
-            return false;
-        });
-    })
-    function addFavorite2() {
-    var url = window.location || 'https://www.zwcsm.com';
-    var title = document.title;
-    var ua = navigator.userAgent.toLowerCase();
-    if (ua.indexOf("360se") > -1) {
-        alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
-    }
-    else if (ua.indexOf("msie 8") > -1) {
-        window.external.AddToFavoritesBar(url, title); //IE8
-    }
-    else if (document.all) {
-  try{
-   window.external.addFavorite(url, title);
-  }catch(e){
-   alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
-  }
-    }
-    else if (window.sidebar) {
-        window.sidebar.addPanel(title, url, "");
-    }
-    else {
-  alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
-    }
-}
-</script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?e333a64c6db9cc1f4ce5c6084ab55e30";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<style>
-    body{
-        padding-top: 0 !important;
-    }
-    .full-section.search-section-listing {
-        height: 100%;
-    }
-</style>
-
-</body></html>
+</html>
