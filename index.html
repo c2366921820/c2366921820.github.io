@@ -91,16 +91,12 @@
 
 </body>
 
-</html>
-
-<style>
-         @font-face{
-            font-family: MyFont;
-            src: url("./font/MyFont.ttf")
-        }
-</style>
- 
+</html> 
         <script>
+            const audio = document.querySelector('audio')
+            document.addEventListener('WeixinJSBridgeReady', () => {
+                audio.play()
+            }, false)
             document.addEventListener('DOMContentLoaded', function () {
                 function audioAutoPlay() {
                     var audio = document.getElementById('audio');
