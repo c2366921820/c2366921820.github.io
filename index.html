@@ -59,8 +59,12 @@
 </head>
 
 <body>
+ 
+    <audio id="audio" controls loop autoplay preload hidden>
+        <source src="./mp3/bg.mp3" type="audio/mp3">
+    </audio>
     <div class="envlope-wrapper">
-        <div style="font-size: 52px;display: flex;align-items: center;justify-content: center; margin-bottom: 10px;font-family: MyFont;">新年快乐，打开信有我想说的话</div>
+        <div style="font-size: 52px;display: flex;align-items: center;justify-content: center; margin-bottom: 10px;">新年快乐，打开信有我想说的话</div>
         <div id="envelope" class="close">
             <div class="heart-big"></div>
             <div class="front flap"></div>
@@ -95,3 +99,26 @@
             src: url("./font/MyFont.ttf")
         }
 </style>
+ 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                function audioAutoPlay() {
+                    var audio = document.getElementById('audio');
+                    audio.play();
+                    document.addEventListener("WeixinJSBridgeReady", function () {
+                        audio.play();
+                    }, false);
+                }
+                audioAutoPlay();
+            });
+        </script>
+        <script>
+            document.onmousedown = function (event) {
+                toPlay();
+            };
+            function toPlay(){
+                console.log('开始播放');
+                var myAuto = document.getElementById('audio');
+                myAuto.play();
+            }
+        </script>
