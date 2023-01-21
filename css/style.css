@@ -7,7 +7,7 @@
     border-bottom-right-radius: 6px;
     margin-left: auto;
     margin-right: auto;
-    top: 150px;
+    top: 180px;
     background-color: #00334c;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
@@ -69,6 +69,7 @@
     height: 14%;
     background-color: #EEEFF0;
     font-size: 12px;
+    font-family: MyFont;
 }
 
 .words.line1 {
@@ -291,11 +292,11 @@ body {
 
 .envlope-wrapper {
     height: 623px;
-    margin-top: 280px;
+    margin-top: 25vh;
 }
 
 #envelope {
-    transform: scale(2.5);
+    transform: scale(3);
 }
 
 .reset button {
