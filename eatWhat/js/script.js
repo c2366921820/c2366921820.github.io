@@ -115,6 +115,10 @@ $(function () {
 		popup.fadeOut();
 	});
 
+	$("#clear").click(function () {
+		list.val('')
+	});
+
 // 	if (hour < 9 || hour >= 23) {
 // 		change(0);
 // 	} else if (hour < 13) {
