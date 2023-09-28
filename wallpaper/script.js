@@ -1,5 +1,5 @@
 // 全局参数定义
-var radius = 240; // 相册的半径
+var radius = 350; // 相册的半径
 var autoRotate = true; // 是否自动旋转
 var rotateSpeed = -60; // 旋转速度
 var imgWidth = 120; // 照片宽度 (unit: px)
@@ -40,7 +40,7 @@ function init(delayTime) {
         document.getElementById('bgText').style.visibility = 'visible'
     },2000)
 	for (var i = 0; i < aEle.length; i++) {
-		aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
+		aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px) scale(1.5)";
 		aEle[i].style.transition = "transform 1s";
 		aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
 	}
